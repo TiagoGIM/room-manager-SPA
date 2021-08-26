@@ -1,0 +1,25 @@
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-grup">
+      <label for="name">nome</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="room.name" name="name">
+    </div>
+    <div class="form-grup">
+      <label for="name">data</label>
+      <input type="text" class="form-control" id="date" required [(ngModel)]="room.date" name="date">
+    </div>
+    <div class="form-grup">
+      <label for="name">hora de inicio</label>
+      <input type="text" class="form-control" id="startHour" required [(ngModel)]="room.startHour" name="startHour">
+    </div>
+    <div class="form-grup">
+      <label for="name">hora de fim</label>
+      <input type="text" class="form-control" id="endHour" required [(ngModel)]="room.endHour" name="endHour">
+    </div>
+    <button type="submit" class="btn btn-primary">Concluir</button>
+  </form>
+</div>
+
+<div>
+  <button (click)="newRoom()" class="btn btn-sucess">Adicionar</button>
+</div>
